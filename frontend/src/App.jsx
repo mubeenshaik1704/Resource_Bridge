@@ -146,6 +146,10 @@ function App() {
   };
 
   const handleLoginSuccess = (user) => {
+    if (!user) {
+    console.error('Login failed: user data is missing');
+    return;
+    }
     setCurrentUser(user);
     // Auto-navigate to the most useful tab for each role
     if (user.role === 'OFFICER') {
