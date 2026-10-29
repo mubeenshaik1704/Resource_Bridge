@@ -150,7 +150,7 @@ Return ONLY a valid JSON object (no markdown, no extra text) in this exact struc
   // ── 6. Call Gemini API ─────────────────────────────────────────────────────
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-3.8-flash' });
 
     const result = await model.generateContent(prompt);
     const rawText = result.response.text().trim();
